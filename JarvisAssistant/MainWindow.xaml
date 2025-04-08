@@ -1,0 +1,46 @@
+﻿<Window x:Class="GeminiJarvis.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="JARVIS -AI Assistant" Height="600" Width="905" Background="#000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- 3D Styled Title -->
+        <TextBlock Text="J.A.R.V.I.S" Foreground="Cyan" FontSize="36" FontWeight="Bold"
+                   HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,10"
+                   FontFamily="Segoe UI">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="Cyan" BlurRadius="20" ShadowDepth="0"/>
+            </TextBlock.Effect>
+        </TextBlock>
+
+        <!-- Status Light Indicator -->
+        <Ellipse x:Name="StatusLight" Width="15" Height="15" Fill="LawnGreen" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0"/>
+
+        <!-- Chat History -->
+        <ScrollViewer x:Name="ChatScrollViewer" Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="ChatPanel" Orientation="Vertical" Background="Transparent"/>
+        </ScrollViewer>
+
+        <!-- Input Section -->
+        <Border Grid.Row="2" Background="#222" Margin="5,5,5,30">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBox x:Name="InputBox" Width="550" Height="30" Margin="5" 
+                         KeyDown="InputBox_KeyDown"
+                         Background="#333" Foreground="White" FontSize="14" VerticalContentAlignment="Center"/>
+                <Button Content="Send" Width="150" Height="30" Margin="5" Click="SendButton_Click" 
+                        Background="Cyan" Foreground="Black" FontSize="14"/>
+                <Button Content="Stop" Width="150" Height="30" Margin="5" Click="StopButton_Click"
+                        Background="Red" Foreground="Black" FontSize="14"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Footer Adjusted to the Bottom -->
+        <TextBlock Grid.Row="2" Text="Made by Team SDK | Design by Team SDK" Foreground="Cyan" FontStyle="Italic"
+                   HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,5"/>
+    </Grid>
+</Window>
