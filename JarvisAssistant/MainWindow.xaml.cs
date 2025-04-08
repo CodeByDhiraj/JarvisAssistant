@@ -14,7 +14,7 @@ namespace GeminiJarvis
     public partial class MainWindow : Window
     {
      
-        private const string GeminiApiKey = "AIzaSyCUkLDnt77mUAhNJGBS0t5j4_SItCgCQBc"; 
+        private const string GeminiApiKey = "YOUR API KEY"; 
         private const string GeminiEndpoint = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent";
         private SpeechRecognitionEngine speechRecognizer;
         private SpeechSynthesizer speechSynthesizer;
